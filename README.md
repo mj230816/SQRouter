@@ -22,7 +22,7 @@ pod 'SQRouter'
 
 ## Author
 
-mj230816, songqian91@aliyun.com
+mj230816, songqian9@aliyun.com
 
 ## License
 

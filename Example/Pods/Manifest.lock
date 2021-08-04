@@ -1,0 +1,16 @@
+PODS:
+  - SQRouter (0.1.0)
+
+DEPENDENCIES:
+  - SQRouter (from `../`)
+
+EXTERNAL SOURCES:
+  SQRouter:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SQRouter: 3f3d7a73c4fec26738854714082eef40a57bc433
+
+PODFILE CHECKSUM: 16d889052379754cd00361083c7cbb4585e1b2ae
+
+COCOAPODS: 1.10.1

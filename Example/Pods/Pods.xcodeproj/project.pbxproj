@@ -1,0 +1,776 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		38D7C47B250C619859FD5C92E855D839 /* Pods-SQRouter_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EFFD669A17FC14A88805383CC5B8386 /* Pods-SQRouter_Tests-dummy.m */; };
+		5FCC616091672C5E9A69E4187B486317 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */; };
+		6CC07A3F58A702B8283670ECDFCC5372 /* Pods-SQRouter_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A1C56AE99EFAE86F180843DC31F805D9 /* Pods-SQRouter_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8713EE34228D55ACE6C05591C0740C7E /* SQRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B30589DB20478C49D2C2A357772B6F /* SQRouter.swift */; };
+		984F6BF9DA3831F91792CE607D31456B /* SQRouter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3227CFE1065AC6451A83233280761681 /* SQRouter-dummy.m */; };
+		9A298A430E71D2F2FDB2128594572FFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		ACA147129F166F22561C62D0E11298DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		C59F8053224BBB1EF67D0E22ACC704B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		C82EB22AEB065C14E555C544A490D0E7 /* SQRouter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 671DE08A09ADE7B29C765969F1C89F8F /* SQRouter-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CFD68B0A8B5C8E7BFD809D1FFACF400B /* Pods-SQRouter_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B078F9B88230FA13E9036B64AB1186F1 /* Pods-SQRouter_Example-dummy.m */; };
+		FED79055E826C20AD29B312A4A4E6974 /* Pods-SQRouter_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BA9650C4C2709C6D3C294F00B4E90E0 /* Pods-SQRouter_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6B8CEECEC486489E53566654D835CF3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1A94E04F4ED74789EC8BC332CF9A12D;
+			remoteInfo = "Pods-SQRouter_Example";
+		};
+		8BA7C7B60246EC5BCEA76B09C05102AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 125F3106C70B6844F1DFB8DBEEEEC303;
+			remoteInfo = SQRouter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0786C95704E08228EC04669A0780886C /* Pods-SQRouter_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SQRouter_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		0C44EA3170562CFA5D56858DE6176346 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		1DEE59B6E00E30868A74CB049901950F /* Pods-SQRouter_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SQRouter_Example-Info.plist"; sourceTree = "<group>"; };
+		1FCF97DBBBE9C7C22F6E4447DF97E07C /* Pods-SQRouter_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SQRouter_Example-frameworks.sh"; sourceTree = "<group>"; };
+		29DA690892D1E0822ABD73C2F86A019E /* Pods_SQRouter_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SQRouter_Example.framework; path = "Pods-SQRouter_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3227CFE1065AC6451A83233280761681 /* SQRouter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SQRouter-dummy.m"; sourceTree = "<group>"; };
+		3EFFD669A17FC14A88805383CC5B8386 /* Pods-SQRouter_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SQRouter_Tests-dummy.m"; sourceTree = "<group>"; };
+		405AD21741212DAF7CFDDEFC498DF4E6 /* SQRouter-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SQRouter-prefix.pch"; sourceTree = "<group>"; };
+		4744B228594E8154CCEC7867691E4536 /* SQRouter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SQRouter.release.xcconfig; sourceTree = "<group>"; };
+		4FAFD238C1E620AA1D3303F08C327E91 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		57451128B1418942A644907320B8D08D /* Pods-SQRouter_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SQRouter_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		64B30589DB20478C49D2C2A357772B6F /* SQRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQRouter.swift; path = SQRouter/Classes/SQRouter.swift; sourceTree = "<group>"; };
+		671DE08A09ADE7B29C765969F1C89F8F /* SQRouter-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SQRouter-umbrella.h"; sourceTree = "<group>"; };
+		7064B0CB79BC3E34D4EB0348DA3784CA /* SQRouter.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SQRouter.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		70C439C987F866D32DE92B1CA037CC2C /* SQRouter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SQRouter.debug.xcconfig; sourceTree = "<group>"; };
+		7547252377418324B7E208637CBF72E2 /* Pods_SQRouter_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SQRouter_Tests.framework; path = "Pods-SQRouter_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8724B48FFF82A891BE090942A03C6F1C /* Pods-SQRouter_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SQRouter_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		9BA9650C4C2709C6D3C294F00B4E90E0 /* Pods-SQRouter_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SQRouter_Example-umbrella.h"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A1C56AE99EFAE86F180843DC31F805D9 /* Pods-SQRouter_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SQRouter_Tests-umbrella.h"; sourceTree = "<group>"; };
+		A9B897BD59A9DF240F87FFF45EAEEFC5 /* SQRouter.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SQRouter.modulemap; sourceTree = "<group>"; };
+		ADD8F37A5EB16FFDD1BB872B0DB69307 /* Pods-SQRouter_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SQRouter_Example.modulemap"; sourceTree = "<group>"; };
+		B078F9B88230FA13E9036B64AB1186F1 /* Pods-SQRouter_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SQRouter_Example-dummy.m"; sourceTree = "<group>"; };
+		B68F7033D33F007496E634186A786A1C /* Pods-SQRouter_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SQRouter_Tests-Info.plist"; sourceTree = "<group>"; };
+		BAD2A43AA2FDEB94BABF502BBCC021AD /* Pods-SQRouter_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SQRouter_Example.release.xcconfig"; sourceTree = "<group>"; };
+		BC2234B112C5BA1D6211AEFD100BE9A3 /* SQRouter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SQRouter.framework; path = SQRouter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFA638E8DF4E8B919FAD4683C8EFBB77 /* Pods-SQRouter_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SQRouter_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		C1FA62A12086CB6DFFC4487D5DE11729 /* Pods-SQRouter_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SQRouter_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C476F0A1BA78641BA4AD92F45FC8D8D1 /* SQRouter-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SQRouter-Info.plist"; sourceTree = "<group>"; };
+		D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		DA76EEDBFD3A787C3D35C1F3C4C74D7E /* Pods-SQRouter_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SQRouter_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		E2339777C8FFF9125644EC105471B101 /* Pods-SQRouter_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SQRouter_Tests.modulemap"; sourceTree = "<group>"; };
+		E61F01EFF8F074A918D9F67569D7624C /* Pods-SQRouter_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SQRouter_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1B01EA0D812E9E2779728EFA251AF921 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A298A430E71D2F2FDB2128594572FFB /* Foundation.framework in Frameworks */,
+				5FCC616091672C5E9A69E4187B486317 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4761FC1AE56E4949A5ED13820943C47F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C59F8053224BBB1EF67D0E22ACC704B7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B720B03CDAD435F0A3CDA9CE767BD33 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACA147129F166F22561C62D0E11298DB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1474B31915486E7431FDAC57E03F043D /* SQRouter */ = {
+			isa = PBXGroup;
+			children = (
+				64B30589DB20478C49D2C2A357772B6F /* SQRouter.swift */,
+				4710C1876AEA0F7FA6EC123BC6FD13C0 /* Pod */,
+				3EB9F53E9C688EC079F90031A6963ADF /* Support Files */,
+			);
+			name = SQRouter;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3EB9F53E9C688EC079F90031A6963ADF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A9B897BD59A9DF240F87FFF45EAEEFC5 /* SQRouter.modulemap */,
+				3227CFE1065AC6451A83233280761681 /* SQRouter-dummy.m */,
+				C476F0A1BA78641BA4AD92F45FC8D8D1 /* SQRouter-Info.plist */,
+				405AD21741212DAF7CFDDEFC498DF4E6 /* SQRouter-prefix.pch */,
+				671DE08A09ADE7B29C765969F1C89F8F /* SQRouter-umbrella.h */,
+				70C439C987F866D32DE92B1CA037CC2C /* SQRouter.debug.xcconfig */,
+				4744B228594E8154CCEC7867691E4536 /* SQRouter.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/SQRouter";
+			sourceTree = "<group>";
+		};
+		41F97252572BD52F14C8248EFEBC093E /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A91558D0491540B0910D0D770A9DE0F7 /* Pods-SQRouter_Example */,
+				AF8E718C16D8155A679D4D4910379C64 /* Pods-SQRouter_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		4710C1876AEA0F7FA6EC123BC6FD13C0 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				4FAFD238C1E620AA1D3303F08C327E91 /* LICENSE */,
+				0C44EA3170562CFA5D56858DE6176346 /* README.md */,
+				7064B0CB79BC3E34D4EB0348DA3784CA /* SQRouter.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */,
+				D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		9D68982CE077BDB1A16E12BFD32D7356 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				29DA690892D1E0822ABD73C2F86A019E /* Pods_SQRouter_Example.framework */,
+				7547252377418324B7E208637CBF72E2 /* Pods_SQRouter_Tests.framework */,
+				BC2234B112C5BA1D6211AEFD100BE9A3 /* SQRouter.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A91558D0491540B0910D0D770A9DE0F7 /* Pods-SQRouter_Example */ = {
+			isa = PBXGroup;
+			children = (
+				ADD8F37A5EB16FFDD1BB872B0DB69307 /* Pods-SQRouter_Example.modulemap */,
+				57451128B1418942A644907320B8D08D /* Pods-SQRouter_Example-acknowledgements.markdown */,
+				BFA638E8DF4E8B919FAD4683C8EFBB77 /* Pods-SQRouter_Example-acknowledgements.plist */,
+				B078F9B88230FA13E9036B64AB1186F1 /* Pods-SQRouter_Example-dummy.m */,
+				1FCF97DBBBE9C7C22F6E4447DF97E07C /* Pods-SQRouter_Example-frameworks.sh */,
+				1DEE59B6E00E30868A74CB049901950F /* Pods-SQRouter_Example-Info.plist */,
+				9BA9650C4C2709C6D3C294F00B4E90E0 /* Pods-SQRouter_Example-umbrella.h */,
+				0786C95704E08228EC04669A0780886C /* Pods-SQRouter_Example.debug.xcconfig */,
+				BAD2A43AA2FDEB94BABF502BBCC021AD /* Pods-SQRouter_Example.release.xcconfig */,
+			);
+			name = "Pods-SQRouter_Example";
+			path = "Target Support Files/Pods-SQRouter_Example";
+			sourceTree = "<group>";
+		};
+		AF8E718C16D8155A679D4D4910379C64 /* Pods-SQRouter_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E2339777C8FFF9125644EC105471B101 /* Pods-SQRouter_Tests.modulemap */,
+				C1FA62A12086CB6DFFC4487D5DE11729 /* Pods-SQRouter_Tests-acknowledgements.markdown */,
+				8724B48FFF82A891BE090942A03C6F1C /* Pods-SQRouter_Tests-acknowledgements.plist */,
+				3EFFD669A17FC14A88805383CC5B8386 /* Pods-SQRouter_Tests-dummy.m */,
+				B68F7033D33F007496E634186A786A1C /* Pods-SQRouter_Tests-Info.plist */,
+				A1C56AE99EFAE86F180843DC31F805D9 /* Pods-SQRouter_Tests-umbrella.h */,
+				E61F01EFF8F074A918D9F67569D7624C /* Pods-SQRouter_Tests.debug.xcconfig */,
+				DA76EEDBFD3A787C3D35C1F3C4C74D7E /* Pods-SQRouter_Tests.release.xcconfig */,
+			);
+			name = "Pods-SQRouter_Tests";
+			path = "Target Support Files/Pods-SQRouter_Tests";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D4537A7B368E569FF42BCC4B8F5C3684 /* Development Pods */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				9D68982CE077BDB1A16E12BFD32D7356 /* Products */,
+				41F97252572BD52F14C8248EFEBC093E /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D4537A7B368E569FF42BCC4B8F5C3684 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1474B31915486E7431FDAC57E03F043D /* SQRouter */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1CA0373AC0BD6F233D30C81588E524DE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CC07A3F58A702B8283670ECDFCC5372 /* Pods-SQRouter_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3135A1B514424584EC02445DD4E4F32 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FED79055E826C20AD29B312A4A4E6974 /* Pods-SQRouter_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFBDBD1F24C364F496F6611FB9E9FF9D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C82EB22AEB065C14E555C544A490D0E7 /* SQRouter-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		125F3106C70B6844F1DFB8DBEEEEC303 /* SQRouter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BF0FCD4DAAE72CBE8466D2ACACAD167 /* Build configuration list for PBXNativeTarget "SQRouter" */;
+			buildPhases = (
+				FFBDBD1F24C364F496F6611FB9E9FF9D /* Headers */,
+				4FFA5A93E3367FB339F66178DB6C2296 /* Sources */,
+				1B01EA0D812E9E2779728EFA251AF921 /* Frameworks */,
+				4273E3B565124CB9B651B3D3CE7C7F37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SQRouter;
+			productName = SQRouter;
+			productReference = BC2234B112C5BA1D6211AEFD100BE9A3 /* SQRouter.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		98A0EB66A49F02D06E760E52F8B68F7F /* Pods-SQRouter_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B96C6E17BB4AE31B4DD2A4CDCCCE5B46 /* Build configuration list for PBXNativeTarget "Pods-SQRouter_Tests" */;
+			buildPhases = (
+				1CA0373AC0BD6F233D30C81588E524DE /* Headers */,
+				D2FFCCBEEFE5A8037FE20F62F1C5F5F2 /* Sources */,
+				4761FC1AE56E4949A5ED13820943C47F /* Frameworks */,
+				2BFCF7740CDE05AD031A8ECA39B4886D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFADCE48FE3CD3D79E63018D29178EF4 /* PBXTargetDependency */,
+			);
+			name = "Pods-SQRouter_Tests";
+			productName = "Pods-SQRouter_Tests";
+			productReference = 7547252377418324B7E208637CBF72E2 /* Pods_SQRouter_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B1A94E04F4ED74789EC8BC332CF9A12D /* Pods-SQRouter_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2431C5831B660CBD22D9059120EDFE72 /* Build configuration list for PBXNativeTarget "Pods-SQRouter_Example" */;
+			buildPhases = (
+				C3135A1B514424584EC02445DD4E4F32 /* Headers */,
+				501E81AC07AE5F599DC6126B5C2E2C9C /* Sources */,
+				6B720B03CDAD435F0A3CDA9CE767BD33 /* Frameworks */,
+				5CF4736EF5E5DC6450396BF0525BFB09 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				53596A50110B191F2F59680A5C836BA1 /* PBXTargetDependency */,
+			);
+			name = "Pods-SQRouter_Example";
+			productName = "Pods-SQRouter_Example";
+			productReference = 29DA690892D1E0822ABD73C2F86A019E /* Pods_SQRouter_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 9D68982CE077BDB1A16E12BFD32D7356 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B1A94E04F4ED74789EC8BC332CF9A12D /* Pods-SQRouter_Example */,
+				98A0EB66A49F02D06E760E52F8B68F7F /* Pods-SQRouter_Tests */,
+				125F3106C70B6844F1DFB8DBEEEEC303 /* SQRouter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2BFCF7740CDE05AD031A8ECA39B4886D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4273E3B565124CB9B651B3D3CE7C7F37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CF4736EF5E5DC6450396BF0525BFB09 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4FFA5A93E3367FB339F66178DB6C2296 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				984F6BF9DA3831F91792CE607D31456B /* SQRouter-dummy.m in Sources */,
+				8713EE34228D55ACE6C05591C0740C7E /* SQRouter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		501E81AC07AE5F599DC6126B5C2E2C9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFD68B0A8B5C8E7BFD809D1FFACF400B /* Pods-SQRouter_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2FFCCBEEFE5A8037FE20F62F1C5F5F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38D7C47B250C619859FD5C92E855D839 /* Pods-SQRouter_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		53596A50110B191F2F59680A5C836BA1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SQRouter;
+			target = 125F3106C70B6844F1DFB8DBEEEEC303 /* SQRouter */;
+			targetProxy = 8BA7C7B60246EC5BCEA76B09C05102AD /* PBXContainerItemProxy */;
+		};
+		EFADCE48FE3CD3D79E63018D29178EF4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-SQRouter_Example";
+			target = B1A94E04F4ED74789EC8BC332CF9A12D /* Pods-SQRouter_Example */;
+			targetProxy = 6B8CEECEC486489E53566654D835CF3E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		107835CA8F3D88CAF05FE99F0F1E0D84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E61F01EFF8F074A918D9F67569D7624C /* Pods-SQRouter_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SQRouter_Tests/Pods-SQRouter_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SQRouter_Tests/Pods-SQRouter_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		14581DDA6C615EC6F2BB1DBD674E43F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70C439C987F866D32DE92B1CA037CC2C /* SQRouter.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SQRouter/SQRouter-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SQRouter/SQRouter-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SQRouter/SQRouter.modulemap";
+				PRODUCT_MODULE_NAME = SQRouter;
+				PRODUCT_NAME = SQRouter;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		7A0FD6D0612798F09B21FAFFB7BF20B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAD2A43AA2FDEB94BABF502BBCC021AD /* Pods-SQRouter_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SQRouter_Example/Pods-SQRouter_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SQRouter_Example/Pods-SQRouter_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		82AEB544745040D8FC4963CBCD23A4B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0786C95704E08228EC04669A0780886C /* Pods-SQRouter_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SQRouter_Example/Pods-SQRouter_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SQRouter_Example/Pods-SQRouter_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A92B8531E7BF593C5AFB17E03409CC1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4744B228594E8154CCEC7867691E4536 /* SQRouter.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SQRouter/SQRouter-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SQRouter/SQRouter-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SQRouter/SQRouter.modulemap";
+				PRODUCT_MODULE_NAME = SQRouter;
+				PRODUCT_NAME = SQRouter;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		E94927F0E1D7063463F99DB9E4A69BEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA76EEDBFD3A787C3D35C1F3C4C74D7E /* Pods-SQRouter_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SQRouter_Tests/Pods-SQRouter_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SQRouter_Tests/Pods-SQRouter_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2431C5831B660CBD22D9059120EDFE72 /* Build configuration list for PBXNativeTarget "Pods-SQRouter_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82AEB544745040D8FC4963CBCD23A4B2 /* Debug */,
+				7A0FD6D0612798F09B21FAFFB7BF20B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */,
+				CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BF0FCD4DAAE72CBE8466D2ACACAD167 /* Build configuration list for PBXNativeTarget "SQRouter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14581DDA6C615EC6F2BB1DBD674E43F0 /* Debug */,
+				A92B8531E7BF593C5AFB17E03409CC1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B96C6E17BB4AE31B4DD2A4CDCCCE5B46 /* Build configuration list for PBXNativeTarget "Pods-SQRouter_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				107835CA8F3D88CAF05FE99F0F1E0D84 /* Debug */,
+				E94927F0E1D7063463F99DB9E4A69BEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

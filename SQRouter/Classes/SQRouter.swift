@@ -361,22 +361,22 @@ extension SQRouterOpenProtocol {
     /// - Returns: 顶层ViewController
     static private func currentViewController() -> UIViewController? {
         
-        var window = UIApplication.shared.keyWindow
+        var keyWindow = UIApplication.shared.keyWindow
         
-        if window?.windowLevel != UIWindow.Level.normal {
+        if keyWindow?.windowLevel != UIWindow.Level.normal {
             
             let windows = UIApplication.shared.windows
             
             for tempWindow in windows {
                 
                 if tempWindow.windowLevel == UIWindow.Level.normal {
-                    window = tempWindow
+                    keyWindow = tempWindow
                     break
                 }
             }
         }
         
-        let viewController = window?.rootViewController
+        let viewController = keyWindow?.rootViewController
         
         return topViewController(viewController)
     }

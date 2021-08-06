@@ -1,5 +1,7 @@
 PODS:
-  - SQRouter (0.1.0)
+  - SQRouter (0.1.1):
+    - SQRouter/Contacts (= 0.1.1)
+  - SQRouter/Contacts (0.1.1)
 
 DEPENDENCIES:
   - SQRouter (from `../`)
@@ -9,7 +11,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SQRouter: 3f3d7a73c4fec26738854714082eef40a57bc433
+  SQRouter: 7f116b5b6cafdcf53d4c3510a41d882667a1b279
 
 PODFILE CHECKSUM: 1b17165ff392da4e63f4107c34e3faeb92a15984
 

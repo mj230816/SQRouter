@@ -1,6 +1,6 @@
 {
   "name": "SQRouter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "SQRouter.",
   "description": "基于runtime映射的原理实现的免注册路由",
   "homepage": "https://github.com/mj230816/SQRouter",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/mj230816/SQRouter.git",
-    "tag": "0.1.0"
+    "tag": "0.1.1"
   },
   "platforms": {
     "ios": "11.0"
@@ -21,5 +21,11 @@
   "swift_versions": "5.0",
   "source_files": "SQRouter/Classes/**/*",
   "frameworks": "UIKit",
+  "subspecs": [
+    {
+      "name": "Contacts",
+      "source_files": "SQRouter/Classes/Contacts/**/*"
+    }
+  ],
   "swift_version": "5.0"
 }

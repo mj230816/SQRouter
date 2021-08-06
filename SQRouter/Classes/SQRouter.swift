@@ -64,7 +64,7 @@ extension SQRouterBaseProtocol {
     
     /// 获取当前模块的Bundle名称
     /// - Returns: 当前模块的Bundle名称
-    static fileprivate func localNamespace() -> String {
+    static internal func localNamespace() -> String {
         
         return Bundle.main.infoDictionary!["CFBundleExecutable"] as! String
     }
@@ -146,7 +146,6 @@ extension SQRouterReturnObjectProtocol {
     ///   - name: 目标ViewController的名称字符串
     ///   - moduleName: 目标ViewController所在的模块名称（即前缀）
     ///   - params: 属性字典
-    
     static fileprivate func viewControllerWith(name: String,
                                                moduleName: String?,
                                                params: [String: Any]?) -> UIViewController? {
@@ -160,6 +159,9 @@ extension SQRouterReturnObjectProtocol {
         // 映射类
         let viewControllerClass: AnyClass? = NSClassFromString(viewControllerClassName)
         guard let viewControllerType = viewControllerClass as? UIViewController.Type else {
+            
+            print("❌ 不存在类\(viewControllerClassName)")
+            
             return nil
         }
         
@@ -173,8 +175,8 @@ extension SQRouterReturnObjectProtocol {
     }
     
     static fileprivate func objectWith(name: String,
-                                  moduleName: String?,
-                                  params: [String: Any]?) -> NSObject? {
+                                       moduleName: String?,
+                                       params: [String: Any]?) -> NSObject? {
         
         // 确认类名
         var objectClassName = "\(Self.localNamespace()).\(name)"
@@ -258,19 +260,19 @@ extension SQRouterOpenProtocol {
     ///   - animated: 是否显示动画
     ///   - fromViewController: presentingViewController
     ///   - completion: present后的回调
-    static fileprivate func presentWith(name: String,
-                                        moduleName: String? = nil,
-                                        params: [String: Any]? = nil,
-                                        animated: Bool = true,
-                                        from fromViewController: UIViewController? = nil,
-                                        completion: (() -> Void)? = nil) {
+    static public func presentWith(name: String,
+                                   moduleName: String? = nil,
+                                   params: [String: Any]? = nil,
+                                   animated: Bool = true,
+                                   from fromViewController: UIViewController? = nil,
+                                   completion: (() -> Void)? = nil) {
         
         guard let presentViewController = Self.viewControllerWith(name: name,
                                                                   moduleName: moduleName,
                                                                   params: params)  else {
             return
         }
-        
+        presentViewController.modalPresentationStyle = .fullScreen
         if let fromViewController = fromViewController {
             fromViewController.present(presentViewController,
                                        animated: animated,
@@ -344,6 +346,214 @@ extension SQRouterOpenProtocol {
                          params: finalParams,
                          animated: true,
                          completion: nil)
+    }
+    
+    /// 以push的形式推出一个ViewController
+    /// - Parameters:
+    ///   - name: 目标ViewController的名称字符串
+    ///   - moduleName: 目标ViewController所在的模块名称（即前缀）
+    ///   - params: 属性字典
+    ///   - animated: 是否显示动画
+    ///   - fromViewController: presentingViewController
+    ///   - completion: present后的回调
+    static public func pushWith(name: String,
+                                moduleName: String? = nil,
+                                params: [String: Any]? = nil,
+                                animated: Bool = true,
+                                from fromViewController: UIViewController? = nil) {
+        
+        guard let pushedController = Self.viewControllerWith(name: name,
+                                                             moduleName: moduleName,
+                                                             params: params) else {
+            return
+        }
+        
+        pushedController.hidesBottomBarWhenPushed = true
+        
+        if let fromViewController = fromViewController {
+            
+            if let navigationController = fromViewController.navigationController {
+                
+                navigationController.pushViewController(pushedController,
+                                                        animated: animated)
+                return
+            }
+            
+            print("\(fromViewController.description)的navigationController不存在")
+            fromViewController.present(pushedController,
+                                       animated: true,
+                                       completion: nil)
+            
+            return
+        }
+        
+        if let navigationController = currentNavigationController() {
+            
+            navigationController.pushViewController(pushedController,
+                                                    animated: true)
+            return
+        }
+        print("\(pushedController.description)的navigationController不存在")
+        Self.currentViewController()?.present(pushedController,
+                                              animated: animated,
+                                              completion: nil)
+    }
+    
+    /// 通过URL，以push的形式推出一个ViewController
+    /// - Parameters:
+    ///   - urlString: url: appscheme://moduleName/ViewControllerName?quereyParams
+    ///   - params: 参数字典。这个参数字典会覆盖url中的参数。
+    static public func pushWith(url urlString: String?,
+                                params: [String: Any]? = nil) {
+        
+        let http = "http"
+        let https = "https"
+        
+        // url
+        guard let sureUrlString = urlString,
+              let url = URL(string: sureUrlString) else {
+            
+            return
+        }
+        
+        // scheme
+        if let scheme = url.scheme,
+           (scheme == https || scheme == http) {
+            // 打开webView
+            
+            return
+        }
+        
+        // host
+        guard let moduleName = url.host else {
+            return
+        }
+        
+        // path
+        let path = url.path as String
+        let startIndex = path.index(path.startIndex, offsetBy: 1)
+        let pathArray = path.suffix(from: startIndex).components(separatedBy: "/")
+        
+        guard pathArray.count == 1 ,
+              let viewControllerName = pathArray.first else {
+            
+            return
+        }
+        
+        // params
+        var finalParams = params
+        
+        if url.queryDictionary == nil,
+           finalParams == nil {
+            
+        } else if let urlParams = url.queryDictionary {
+            
+            finalParams?.merge(urlParams, uniquingKeysWith: { paramsKeyValue, urlKeyValue in
+                return paramsKeyValue
+            })
+        }
+        
+        Self.pushWith(name: viewControllerName,
+                      moduleName: moduleName,
+                      params: finalParams,
+                      animated: true,
+                      from: nil)
+    }
+    
+    /// 以present.formSheet的形式弹出一个ViewController
+    /// - Parameters:
+    ///   - name: 目标ViewController的名称字符串
+    ///   - moduleName: 目标ViewController所在的模块名称（即前缀）
+    ///   - params: 属性字典
+    ///   - animated: 是否显示动画
+    ///   - fromViewController: presentingViewController
+    ///   - completion: present后的回调
+    static public func shootWith(name: String,
+                                 moduleName: String? = nil,
+                                 params: [String: Any]? = nil,
+                                 animated: Bool = true,
+                                 from fromViewController: UIViewController? = nil,
+                                 completion: (() -> Void)? = nil) {
+        
+        guard let presentViewController = Self.viewControllerWith(name: name,
+                                                                  moduleName: moduleName,
+                                                                  params: params)  else {
+            return
+        }
+        
+        if let fromViewController = fromViewController {
+            fromViewController.present(presentViewController,
+                                       animated: animated,
+                                       completion: completion)
+            return
+        }
+        
+        Self.currentViewController()?.present(presentViewController,
+                                              animated: animated,
+                                              completion: completion)
+        
+        
+    }
+    
+    /// 通过URL，以present的形式弹出一个ViewController
+    /// - Parameters:
+    ///   - urlString: url: appscheme://moduleName/ViewControllerName?quereyParams
+    ///   - params: 参数字典。这个参数字典会覆盖url中的参数。
+    static public func shootWith(url urlString: String?,
+                                 params: [String: Any]? = nil) {
+        
+        let http = "http"
+        let https = "https"
+        
+        // url
+        guard let sureUrlString = urlString,
+              let url = URL(string: sureUrlString) else {
+            
+            return
+        }
+        
+        // scheme
+        if let scheme = url.scheme,
+           (scheme == https || scheme == http) {
+            // 打开webView
+            
+            return
+        }
+        
+        // host
+        guard let moduleName = url.host else {
+            return
+        }
+        
+        // path
+        let path = url.path as String
+        let startIndex = path.index(path.startIndex, offsetBy: 1)
+        let pathArray = path.suffix(from: startIndex).components(separatedBy: "/")
+        
+        guard pathArray.count == 1 ,
+              let viewControllerName = pathArray.first else {
+            
+            return
+        }
+        
+        // params
+        var finalParams = params
+        
+        if url.queryDictionary == nil,
+           finalParams == nil {
+            
+        } else if let urlParams = url.queryDictionary {
+            
+            finalParams?.merge(urlParams, uniquingKeysWith: { paramsKeyValue, urlKeyValue in
+                return paramsKeyValue
+            })
+        }
+        
+        Self.shootWith(name: viewControllerName,
+                       moduleName: moduleName,
+                       params: finalParams,
+                       animated: true,
+                       completion: nil)
     }
     
 }
@@ -478,9 +688,9 @@ extension SQRouterPerformProtocol {
     }
     
     public func performTarget(_ object: AnyObject?,
-                                     action: String,
-                                     with param1: Any? = nil,
-                                     with param2: Any? = nil) -> Unmanaged<AnyObject>? {
+                              action: String,
+                              with param1: Any? = nil,
+                              with param2: Any? = nil) -> Unmanaged<AnyObject>? {
         
         return Self.performTarget(object,
                                   action: action,
@@ -522,10 +732,10 @@ extension SQRouterPerformProtocol {
     }
     
     public func performClass(_ className: String,
-                                    moduleName: String? = nil,
-                                    action: String,
-                                    with param1: Any? = nil,
-                                    with param2: Any? = nil) -> Unmanaged<AnyObject>? {
+                             moduleName: String? = nil,
+                             action: String,
+                             with param1: Any? = nil,
+                             with param2: Any? = nil) -> Unmanaged<AnyObject>? {
         
         return Self.performClass(className,
                                  moduleName: moduleName,
